@@ -1,0 +1,44 @@
+html, body{
+  height:100%;
+  font-family:Arial;
+  margin:0 auto;
+}
+a{
+  text-decoration:none;
+  color:blue;
+}
+
+/* Challenge 7: Create a class rule, container that set the display property to flex */
+
+/* Challenge 8: Create a class rule, column that set the flex-direction property to column */
+
+/* Challenge 9: Create a class rule, center that set the align-items property to center and the justify-contents to center */
+
+/* Challenge 10: Modify the below CSS rule in order set the flex property for all the hyperlinks in the nav element to 1 */
+nav a{
+
+  text-align:center;
+  padding:10px;
+  transition:0.5s
+}
+nav a:hover{
+    background-color:blue;
+    color:white;
+    transition:0.5s;
+}
+#banner{
+  background-color:blue;
+  color:white;
+  padding:20px;
+}
+#body{
+  padding:50px;
+}
+#links{
+  padding:50px;
+}
+#footer{
+  background-color:blue;
+  color:white;
+  padding:20px;
+}

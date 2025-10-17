@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- WD Lesson 2.3: How do we style a specific element?-->
+<!-- Resources 
+      https://www.w3schools.com/css/default.asp 
+      https://www.w3schools.com/css/css_selectors.asp 
+      https://www.w3schools.com/css/css_specificity.asp 
+-->
+<html>
+  <head>
+    <title>Exploring Id Selectors & Specificity</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #bannerSeparator{
+        height: 10px;
+        border:0px solid white;
+        background-image: linear-gradient(to right, blue, white);
+      }
+      img{
+        height:100px;
+      }
+      #logo_container{
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <!-- Challenge 1: Add the image of banner.jpg.  Add an id of "banner" to the image-->
+
+    <!-- Challenge 2: Add a horizontal rule.  Add an id of "bannerSeparator" to the <hr>-->
+    
+    <!-- Challenge 3: Add in id of logoContainer to the div below.-->
+    <div>
+      <img src="html.png" class="logo">
+      <img src="css.png" class="logo">
+      <img src="js.png" class="logo">
+    </div>
+    <hr>
+    <div id="main_container">
+      <p>You probably know that computers don't communicate with each other the way that people do. Instead, computers require codes, or directions. These binary codes and commands allow computers to process needed information. Every second, billions upon billions of ones and zeros are processed in order to provide you with the information you need.</p>
+
+      So what does that have to do with your ability to post your latest pictures online? Everything.
+
+      <p>The methods by which computers communicate with each other through the use of markup languages and multimedia packages is known as web technology. In the past few decades, web technology has undergone a dramatic transition, from a few marked up web pages to the ability to do very specific work on a network without interruption. Let's look at some examples of web technology.</p>
+      <a href="https://study.com/academy/lesson/what-is-web-technology-definition-trends.html" target="_blank"> Source </a>
+    </div>
+
+  </body>
+</html>

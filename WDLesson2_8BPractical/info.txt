@@ -1,0 +1,37 @@
+Links
+      <a href="">Tutorial</a>
+      <a href="">Reference</a>
+      <a href="">Example</a>
+      <a href="">Exercises</a>
+      <a href="">Certification</a>
+
+
+Banner
+      <div> w3Schools.com </div>
+      <div style="font-size:8pt"> THE WORLD'S LARGEST WEB DEVELOPER SITE </div>
+
+
+Body
+   Sidebar
+      <div id="links" >
+        <a href="">Learn HTML</a>
+        <a href="">Learn CSS</a>
+        <a href="">Learn Bootstrap</a>
+        <a href="">Learn W3.CSS</a>
+        <a href="">Learn Colors</a>
+        <a href="">Learn Icons</a>
+        <a href="">Learn Graphics</a>
+        <a href="">Learn How To</a>
+        <a href="">Learn Sass</a> 
+      </div>
+   Main Content
+      <div id="main">
+          <h1> HTML</h1>
+      </div>
+   Sample Content
+      <div id="sample">
+          <h1>Sample Code</h1>
+      </div>
+
+Footer
+      <p>Copyright 1999-2020 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.</p>

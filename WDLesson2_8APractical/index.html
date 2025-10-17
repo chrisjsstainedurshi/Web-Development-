@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- WD Lesson 2.8: 
+     How can we use flexbox to create a web page layout? -->
+
+<!-- Resources 
+     https://www.w3schools.com/css/css_website_layout.asp
+     https://www.w3schools.com/css/css3_flexbox.asp
+-->
+<html>
+  <head>
+    <title>WD Lesson 2.8A Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <!--Challenge 1: Give the <nav> below a class of container -->
+    <nav>
+      <a href="">Home</a>
+      <a href="">Gallery</a>
+      <a href="">About</a>
+    </nav>
+    <!--Challenge 2: Give the <div> below with an id of "banner" a class of container, column and center -->
+    <div id="banner">
+      <h1>Secret of Web Development</h1>
+      <p>HTML, CSS, JavaScript</p>
+    </div>
+    <!--Challenge 3: Give the <div> below with an id of "main" a class of container -->
+    <div id="main" class="container">
+      <!--Challenge 4: Give the <div> below with an id of "body" a class of container and column -->
+      <div id="body">
+        <img src="webicons.png" width="300px" style="margin:0 auto">
+        <p>Web development is the work involved in developing a Web site for the Internet (World Wide Web) or an intranet (a private network).[1] Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications (Web apps), electronic businesses, and social network services. A more comprehensive list of tasks to which Web development commonly refers, may include Web engineering, Web design, Web content development, client liaison, client-side/server-side scripting, Web server and network security configuration, and e-commerce development.</p>
+        <a href="https://en.wikipedia.org/wiki/Web_development">Source</a>
+      </div>
+      <!--Challenge 5: Give the <div> below with an id of "links" a class of container and column -->
+      <div id="links">
+        <img src="webicons1.png" width="100px">
+        <img src="webicons2.png" width="100px">
+        <img src="webicons3.png" width="100px">
+      </div>
+    </div>
+    <!--Challenge 6: Give the <div> below with an id of "footer" a class of container -->
+    <div id="footer" class="container">
+      @Copyright 2020
+    </div>
+  </body>
+</html>
