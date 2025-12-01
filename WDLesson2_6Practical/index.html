@@ -16,7 +16,9 @@
     <script src="script.js"></script>
     <style>
       /* Challenge 6: Using internal styling,  change the color of the web page.
-
+        body {
+        background-color: white
+        }
       /* Further challenges are located in style.css  */
 
       /* Challenge 12: Create the other pages in the sitemap using index.html as the template. 
@@ -30,15 +32,29 @@
   </head>
   <body>
     <!-- Challenge 1: Create the navigation bar in support of the sitemap associated with the website. -->
+              <div>
 
+              <a href="css.html">CSS</a>
+              <a href="html.html">HTML</a>
+              <a href="js.html">JavaScript</a>
+              </div>
     <!-- Challenge 2: Create a banner container with heading of "Web Development".  Give it a class of "banner".-->
-
+    <div class="banner">
+  <h1>Web Development</h1>
+</div>
     <div class="main">
       <!-- Challenge 3: Add the image of webicons.png-->
+       <div class="banner">
+  <h1>Web Development</h1>
+  <img src="webicons.png" alt="Web Development Icons">
+</div>
       <!-- Challenge 4: Using inline styling, resize the above image appropriately -->
-      <!-- Challenge 5: Write a paragraph describing web development.  Discuss the purpose of HTML, CSS and JavaScript -->
+  <div class="banner">
+  <h1>Web Development</h1>
+  <img src="webicons.png" alt="Web Development Icons" style="width: 100%; height: auto; max-width: 600px; margin: 0 auto; display: block;">
+</div>
 
-    </div>
+    <p>CSS, HTML, and JavaScript are the holy trinity of web development. HTML provides the structure and content of a website, acting as the skeleton that holds everything together. CSS then comes in to style and layout the HTML elements, giving the site its visual flair and personality. JavaScript brings it all to life with dynamic interactions, animations, and functionality, allowing developers to create immersive user experiences that go beyond static pages. Together, these three technologies form the backbone of the web as we know it.</p>
 
   </body>
 </html>
