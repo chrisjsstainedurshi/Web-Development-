@@ -1,0 +1,50 @@
+html,body{
+  margin:0 auto;
+  font-family:Arial;
+}
+.container{
+  display:flex;
+}
+.center{
+  justify-content:center;
+  align-items:center;
+}
+.column{
+  flex-direction: column;
+}
+
+nav{
+  background-color:cornflowerblue;
+}
+nav a{
+  color:black;
+  padding:10px;
+  flex:1;
+  text-decoration:none;
+  text-align:center;
+}
+nav a:hover{
+  color:white;
+}
+#banner{
+  background-color:blue;
+  color:white;
+}
+#footer{
+  background-color:cornflowerblue;
+  color:white;
+  position:fixed;
+  left: 0;
+  right: 0;
+  bottom:0px;
+}
+.card{
+  flex:1;
+  padding:10px;
+  margin:10px;
+  border:1px solid black;
+}
+.card img{
+  height:200px;
+}
+ 

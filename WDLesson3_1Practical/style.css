@@ -1,0 +1,21 @@
+.button{
+    background-color:blue;
+    color:white;
+    border-radius:4px;
+    padding:6px;
+    margin:10px;
+    box-shadow:2px 2px 2px black;
+}
+.button:hover{
+    background-color:blueviolet;
+}
+/* Challenge 4: Give all elements with a class of container a display of flex */
+
+
+/* Challenge 5: Give all the images inside an element with a class of "container" a flex of 1, round the corner 10px, height of 150px 
+   and drop a black shadow */
+
+/* Challenge 6: Justify contents and align items in the center for all elements with a class of center */
+
+
+/* Challenge 7: When the user hovers an image change the color of the shadow to red */

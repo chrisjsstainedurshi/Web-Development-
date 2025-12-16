@@ -1,0 +1,50 @@
+input[type="text"]{
+  width:100px;
+}
+
+html,body{
+  margin:0 auto;
+  font-family:Arial;
+}
+.container{
+  display:flex;
+  padding:10px;
+}
+.center{
+  justify-content:center;
+  align-items:center;
+}
+
+.subbanner{
+  background-color:cornflowerblue;
+}
+#banner{
+  background-color:blue;
+  color:white;
+}
+ #footer{
+   background-color:cornflowerblue;
+   color:white;
+   position:fixed;
+   left: 0;
+   right: 0;
+   bottom:0px;
+   height:30px;
+ }
+ #example{
+   padding:20px;
+ }
+ .heading{
+   font-weight:bold;
+ }
+
+ .card{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+}
+.card img{
+  width:100%;
+}

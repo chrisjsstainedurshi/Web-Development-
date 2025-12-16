@@ -1,0 +1,41 @@
+html,body{
+  margin:0 auto;
+  font-family:Arial;
+}
+.container{
+  display:flex;
+}
+.center{
+  justify-content:center;
+  align-items:center;
+}
+.subbanner{
+  background-color:cornflowerblue;
+  padding:10px;
+}
+#banner{
+  background-color:blue;
+  color:white;
+}
+ #footer{
+   background-color:cornflowerblue;
+   color:white;
+   position:fixed;
+   left: 0;
+   right: 0;
+   bottom:0px;
+ }
+ #story{
+   padding:20px;
+   font-family:Comic Sans MS;
+   display: none;
+   margin-bottom:100px;
+ }
+ #story span{
+   color:red;
+   font-weight:bold;
+ }
+ .task{
+   min-height:200px;
+   
+ }
