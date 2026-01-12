@@ -24,7 +24,20 @@
       </div>
       <div class="card">
         <!-- Challenge 3: Create the necessary UI in order to calculate the area and circumference of a circle.  This will require separate buttons for area and circumference each with their own handler. -->
+<div>
+  <label for="radius">Radius:</label>
+  <input type="number" id="radius" name="radius" placeholder="Enter radius">
+</div>
 
+<div>
+  <button onclick="calculateArea()">Calculate Area</button>
+  <button onclick="calculateCircumference()">Calculate Circumference</button>
+</div>
+
+<div>
+  <p>Area: <span id="circleArea"></span></p>
+  <p>Circumference: <span id="circleCircumference"></span></p>
+</div>
         <!-- Go to script.js to complete Challenge 4 --> 
         
       </div>

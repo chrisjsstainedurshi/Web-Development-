@@ -1,37 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-   </head>
-  <body id="body">
-    <script src="script.js"></script>
-    <div id="banner" class="container center">
-      <h1> Simple Arthmetic Formulas</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rectangle Area & Perimeter Calculator</h1>
+    <div>
+        <label for="length">Length:</label>
+        <input type="number" id="length" placeholder="Enter length" required>
     </div>
-    <nav class="container">
-      <a href="index.html"> Home </a>
-      <a href="rectangle.html"> Rectangle </a>
-      <a href="circle.html"> Circle </a>
-    </nav>
-    <div class="container">
-      <div class="card">
-        <h3>Rectangle</h3>
-        <img src="Rectangle.jpg">
-      </div>
-      <div class="card">
+    <div>
+        <label for="width">Width:</label>
+        <input type="number" id="width" placeholder="Enter width" required>
+    </div>
+
+    <button id="calculateArea">Calculate Area</button>
+    <button id="calculatePerimeter">Calculate Perimeter</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+       
+        document.getElementById('calculateArea').addEventListener('click', function() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            if (!isNaN(length) && !isNaN(width) && length > 0 && width > 0) {
+                const area = length * width;
+                document.getElementById('result').innerHTML = `Area: ${area} square units`;
+            } else {
+                document.getElementById('result').innerHTML = "Please enter valid positive values for length and width.";
+            }
+        });
+
+        document.getElementById('calculatePerimeter').addEventListener('click', function() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            if (!isNaN(length) && !isNaN(width) && length > 0 && width > 0) {
+                const perimeter = 2 * (length + width);
+                document.getElementById('result').innerHTML = `Perimeter: ${perimeter} units`;
+            } else {
+                document.getElementById('result').innerHTML = "Please enter valid positive values for length and width.";
+            }
+        });
+    </script>
+</body>
+</html>
+        
+        
         <!-- Challenge 1: Create the necessary UI in order to calculate the area and perimeter of a rectangle.  
          This will require separate buttons for area and perimeter each with their own event handler. -->
 
-        <!-- Go to script.js to complete Challenge 2 --> 
-
-      </div>
-    </div>
-
-    <div id="footer" class="container center">
-      <h3>WD Lesson 3.5 Practical</h3>
-    </div>  
-  </body>
-</html>
+        <!-- Go to script.js to complete Challenge 2 -->
