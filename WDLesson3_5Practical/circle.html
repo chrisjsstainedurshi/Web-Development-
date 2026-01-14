@@ -1,50 +1,96 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-   </head>
-  <body id="body">
-    <script src="script.js"></script>
-    <div id="banner" class="container center">
-      <h1> Simple Arthmetic Formulas</h1>
-      <h3>Circle Example</h3>
-    </div>
-    <nav class="container">
-      <a href="index.html"> Home </a>
-      <a href="rectangle.html"> Rectangle </a>
-      <a href="circle.html"> Circle </a>
-    </nav>
-    <div class="container">
-      <div class="card">
-        <h3>Circle</h3>
-        <img src="Circle.png">
-      </div>
-      <div class="card">
-        <!-- Challenge 3: Create the necessary UI in order to calculate the area and circumference of a circle.  This will require separate buttons for area and circumference each with their own handler. -->
-<div>
-  <label for="radius">Radius:</label>
-  <input type="number" id="radius" name="radius" placeholder="Enter radius">
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Circle Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-<div>
-  <button onclick="calculateArea()">Calculate Area</button>
-  <button onclick="calculateCircumference()">Calculate Circumference</button>
-</div>
+    .container {
+      background: white;
+      padding: 20px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
 
-<div>
-  <p>Area: <span id="circleArea"></span></p>
-  <p>Circumference: <span id="circleCircumference"></span></p>
-</div>
-        <!-- Go to script.js to complete Challenge 4 --> 
-        
-      </div>
-    </div>
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
 
-    <div id="footer" class="container center">
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Circle Calculator</h2>
+
+    <input
+      type="number"
+      id="radius"
+      placeholder="Enter radius"
+      min="0"
+    />
+
+    <button onclick="calculateArea()">Calculate Area</button>
+    <button onclick="calculateCircumference()">Calculate Circumference</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculateArea() {
+      const radius = document.getElementById("radius").value;
+      if (radius === "" || radius <= 0) {
+        showError();
+        return;
+      }
+      const area = Math.PI * radius * radius;
+      document.getElementById("result").textContent =
+        `Area: ${area.toFixed(2)}`;
+    }
+
+    function calculateCircumference() {
+      const radius = document.getElementById("radius").value;
+      if (radius === "" || radius <= 0) {
+        showError();
+        return;
+      }
+      const circumference = 2 * Math.PI * radius;
+      document.getElementById("result").textContent =
+        `Circumference: ${circumference.toFixed(2)}`;
+    }
+
+    function showError() {
+      document.getElementById("result").textContent =
+        "Please enter a valid radius.";
+    }
+  </script>
+<div id="footer" class="container center">
       <h3>WD Lesson 3.5 Practical</h3>
-    </div>  
-  </body>
+</body>
 </html>
+  
