@@ -24,6 +24,17 @@
     <div class="solutions">
       <!-- Challenge 1: UI for Average program. Note: User will enter three grades as three separate inputs. -->
       <!-- Challenge 2 is in script.js -->
+<div class="average-section">
+  <h3>Average</h3>
+  <label for="grade1">Grade 1:</label>
+  <input type="number" id="grade1" name="grade1">
+  <label for="grade2">Grade 2:</label>
+  <input type="number" id="grade2" name="grade2">
+  <label for="grade3">Grade 3:</label>
+  <input type="number" id="grade3" name="grade3">
+  <button onclick="calculateAverage()">Calculate Average</button>
+  <p id="averageResult"></p>
+</div>
 
     </div>
     <div class="container subbanner">
@@ -37,6 +48,20 @@
     <div class="solutions">
       <!-- Challenge 3: UI for Slope program.  Note: User will enter values for x1, y1, x2 and y2 as four separate inputs. -->
       <!-- Challenge 4 is in script.js -->
+       <div class="slope-section">
+  <h3>Slope</h3>
+  <label for="x1">x1:</label>
+  <input type="number" id="x1" name="x1">
+  <label for="y1">y1:</label>
+  <input type="number" id="y1" name="y1">
+  <label for="x2">x2:</label>
+  <input type="number" id="x2" name="x2">
+  <label for="y2">y2:</label>
+  <input type="number" id="y2" name="y2">
+  <button onclick="calculateSlope()">Calculate Slope</button>
+  <p id="slopeResult"></p>
+</div>
+
     </div>
     <div class="container subbanner">
       <div>
@@ -48,6 +73,15 @@
     <div class="solutions last">
       <!-- Challenge 5: UI for BMI program. Note: User will enter their height and weight as two separate inputs. -->
       <!-- Challenge 6 is in script.js -->
+       <div class="bmi-section">
+  <label for="height">Height (in meters):</label>
+  <input type="number" step="0.01" id="height" name="height">
+  <label for="weight">Weight (in kg):</label>
+  <input type="number" step="0.1" id="weight" name="weight">
+  <button onclick="calculateBMI()">Calculate BMI</button>
+  <p id="bmiResult"></p>
+</div>
+
     </div>
     <div id="footer" class="container center">
       <h3>WD Lesson 3.6 Practical</h3>
