@@ -27,7 +27,33 @@
         </p>
         <hr>
         <!-- Challenge 3: Create the necessary UI in order to calculate the compound interest.  Observe all the variables on the right side of the equal side these are required pieces of information. -->
+<h2>Compound Interest Calculator</h2>
 
+<div>
+  <label>Principal (P):</label>
+  <input type="number" id="principal">
+</div>
+
+<div>
+  <label>Interest Rate (r):</label>
+  <input type="number" id="rate" step="0.01">
+</div>
+
+<div>
+  <label>Compounds Per Year (n):</label>
+  <input type="number" id="compounds">
+</div>
+
+<div>
+  <label>Time in Years (t):</label>
+  <input type="number" id="time">
+</div>
+
+<button onclick="calculateCompoundInterest()">
+  Calculate Interest
+</button>
+
+<div id="compoundResult"></div>
         <!-- Go to script.js to complete Challenge 4 --> 
 
       </div>
