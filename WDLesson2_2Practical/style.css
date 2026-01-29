@@ -7,7 +7,7 @@
 
 /* Challenge 5: Change the family of all elements to Arial */
 * {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
 }
 /* Challenge 6: Change the background color to blue, the color of the text to white for all elements 
 with a class of "info" */

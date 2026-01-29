@@ -34,3 +34,8 @@ ul, ol {
   color: white;
   font-weight: bold;
 Hint:  You can specify several CSS rules for one element by separating the rules with commas.  Look at some example on w3schools */
+div {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
