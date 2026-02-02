@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 4.1 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+      let secret = Math.floor(Math.random()*10 + 1);
+      //When the webpage loads, secret is set to a random number from 1 to 10
+      function guess(){
+        let g = parseFloat(document.getElementById("guess").value);
+        let output = document.getElementById("output");
+        let message = ""
+
+        // Challenge 5: If the guess is lower than secret, set message to "Guess higher" 
+
+        // Challenge 6: If the guess is higher than secret, set message to "Guess lower" 
+
+        // Challenge 7: If the guess is equal to secret, set message to "You got it!" 
+
+        output.innerHTML = `<h3>${message}</h3>`
+        //Note:  Remember innerHTML accepts any type of HTML for example an image
+        
+
+      }
+    </script>
+   </head>
+  <body>
+    <nav class="container">
+      <a href="index.html"> Home </a>
+      <a href="discount.html"> Discount </a>
+      <a href="collision.html"> Collision </a>
+      <a href="translation.html"> Translation </a>
+      <a href="guessing.html"> Guess Game </a>
+    </nav>
+    <div id="banner" class="container center">
+      <h1> Guessing Game</h1>
+    </div>
+     <div class="container subbanner">
+      <div>
+        <div class="highlight">Scenario:</div>User tries to guess a secret number. Tell the user to go higher or lower until they guess the secret number.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <h3> Guess a number between 1 and 10 </h3>
+        <input type="text" id="guess" placeholder="Enter guess">
+        <input type="button" onclick="guess()" value="Guess">
+        <div id="output"></div>    
+      </div>
+    </div>
+
+   <div id="footer" class="container center">
+      <h3>WD Lesson 4.1 Practical</h3>
+    </div>
+  </body>
+</html>

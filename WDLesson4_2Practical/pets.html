@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pets</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+   </head>
+  <body id="body">
+    <script src="script.js"></script>
+    <nav class="container">
+      <a href="index.html"> Home </a>
+      <a href="area.html"> Area </a>
+      <a href="pets.html"> Pets </a>
+    </nav>
+    <div id="banner" class="container center">
+      <h1> Pets</h1>
+    </div>
+     <div class="container subbanner">
+      <div>
+        <div class="highlight">Scenario:</div>Create a program that allows the user to select one of six different pictures to see.  User can specify the type of animal and type of setting.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <h3> Select an animal and setting </h3>
+        <select id="animal">
+          <option disabled>Select animal</option>
+          <option>Bear</option>
+          <option>Cat</option>
+          <option>Dog</option>
+        </select>
+        <select id="emotion">
+          <option disabled>Select animal</option>
+          <option>Funny</option>
+          <option>Sad</option>
+        </select>
+        <input type="button" onclick="pet()" value="Pet">
+        <div id="output"></div>        
+      </div>
+    </div>
+
+   <div id="footer" class="container center">
+      <h3>Lesson 4.2 Practical</h3>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 4.1 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+      function collision(){
+        let x1 = parseFloat(document.getElementById("x1").value);
+        let y1 = parseFloat(document.getElementById("y1").value);
+        let x2 = parseFloat(document.getElementById("x2").value);
+        let y2 = parseFloat(document.getElementById("y2").value);
+        let output = document.getElementById("output");
+        let filename = ""
+
+        let distance = Math.sqrt(Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2))
+        // Challenge 4: If the distance is less than 5, set filename to "explosion.gif" otherwise set it to "snoopy-pilot.gif"
+
+        output.innerHTML = `<img src="${filename}">`
+        //Note:  Remember innerHTML accepts any type of HTML for example an image
+        
+
+      }
+    </script>
+   </head>
+  <body>
+    <nav class="container">
+      <a href="index.html"> Home </a>
+      <a href="discount.html"> Discount </a>
+      <a href="collision.html"> Collision </a>
+      <a href="translation.html"> Translation </a>
+      <a href="guessing.html"> Guess Game </a>
+    </nav>
+    <div id="banner" class="container center">
+      <h1> Collision</h1>
+    </div>
+     <div class="container subbanner">
+      <div>
+        <div class="heading"> Scenario</div>
+        Determine if the customer qualifies for a discount. Discounts are given for purchase totals greater than $100.
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <input type="text" id="x1" placeholder="Enter x1">
+        <input type="text" id="y1" placeholder="Enter y1"><br>
+        <input type="text" id="x2" placeholder="Enter x2">
+        <input type="text" id="y2" placeholder="Enter y2"><br>
+        <input type="button" onclick="collision()" value="Check collision">
+        <div id="output"></div>        
+      </div>
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>WD Lesson 4.1 Practical</h3>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Kesson 4.3 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #massTable{
+        margin:0 auto;
+        border-collapse:collapse;
+      }
+      th,td{
+        border: 1px solid black;
+        padding:5px;
+      }
+      th{
+        background-color:black;
+        color:white;
+      }
+      .subtopic{
+        font-style:italic;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+        <h1>BMI</h1>
+        <h3 class="subtopic">Body Mass Index</h3>
+      </div>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to use the logical && operator to check if a value is within a range as well as using "else if" can be used to avoid unnecessary decisions.</p>
+       </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h3> Body Mass Index </h3>
+        <p><span class="highlight">Scenario:</span>Allow the user to enter their height and weight. Display their BMI along with the category and a picture of your choice for the category.</p>
+
+        <table id="massTable">
+          <tr><th>BMI</th><th>Status</th></tr>
+          <tr><td>Below 18.5</td><td>Underweight</td></tr>
+          <tr><td>18.5 - 24.9</td><td>Healthy Weight</td></tr>
+          <tr><td>25.0 - 29.9</td><td>Overweight</td></tr>
+          <tr><td>30.0 and Above</td><td>Obesity</td></tr>
+        </table>
+        <a href="hhttps://www.cdc.gov/growth-chart-training/hcp/using-bmi/calculating-bmi.html"> CDC Reference </a>
+        <hr>
+        <!-- Challenge 1: Create the UI.  You will need to look up the formula for BMI in order to determine the number of text inputs required. -->
+      </div>
+     
+    </div>
+    <div id="footer" class="container center">
+      <h3>Lesson 4.3 Practical</h3>
+    </div> 
+  </body>
+</html>
+
+

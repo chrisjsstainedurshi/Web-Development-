@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 4.1 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+    function translateHouse(){
+        let lang = document.getElementById("language").value;
+        let house = ""
+
+        // Challenge 9: If the language is equal to "Spanish", set house to "casa"
+
+        // Challenge 10: Make a similar decision for the other two languages in the drop down.
+
+        // Challenge 11: Display an appropriate message stating "house" in the specified language is given translation.       
+        
+
+      }
+    </script>
+   </head>
+  <body>
+    <nav class="container">
+      <a href="index.html"> Home </a>
+      <a href="discount.html"> Discount </a>
+      <a href="collision.html"> Collision </a>
+      <a href="translation.html"> Translation </a>
+      <a href="guessing.html"> Guess Game </a>
+    </nav>
+    <div id="banner" class="container center">
+      <h1> Translation</h1>
+    </div>
+     <div class="container subbanner">
+      <div>
+        <div class="highlight">Scenario:</div>Translate "house" into the specified language.  Decide which language to use in order to translate.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <h3> Translate house into another language </h3>
+        <select id="langauge">
+          <option disabled>Select language</option>
+          <option>Spanish</option>
+          <!-- Challenge 8: Add two more language as shown above -->
+           
+        </select>
+        <input type="button" onclick="translateHouse()" value="Translate">
+        <div id="output"></div>        
+      </div>
+    </div>
+
+   <div id="footer" class="container center">
+      <h3>WD Lesson 4.1 Practical</h3>
+    </div>
+  </body>
+</html>
