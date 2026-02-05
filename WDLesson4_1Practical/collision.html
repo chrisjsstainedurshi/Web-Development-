@@ -6,24 +6,30 @@
     <title>WD Lesson 4.1 Practical</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script>
-      function collision(){
+      function collision() {
         let x1 = parseFloat(document.getElementById("x1").value);
         let y1 = parseFloat(document.getElementById("y1").value);
         let x2 = parseFloat(document.getElementById("x2").value);
         let y2 = parseFloat(document.getElementById("y2").value);
         let output = document.getElementById("output");
-        let filename = ""
+        let filename = "";
 
-        let distance = Math.sqrt(Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2))
-        // Challenge 4: If the distance is less than 5, set filename to "explosion.gif" otherwise set it to "snoopy-pilot.gif"
+        // Calculate the distance between the two points
+        let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 
-        output.innerHTML = `<img src="${filename}">`
-        //Note:  Remember innerHTML accepts any type of HTML for example an image
-        
+        // Challenge 4: If the distance is less than 5, set filename to "explosion.gif"
+        // Otherwise set it to "snoopy-pilot.gif"
+        if (distance < 5) {
+          filename = "explosion.gif";
+        } else {
+          filename = "snoopy-pilot.gif";
+        }
 
+        // Output the image based on the calculated distance
+        output.innerHTML = `<img src="${filename}" alt="Collision Image">`;
       }
     </script>
-   </head>
+  </head>
   <body>
     <nav class="container">
       <a href="index.html"> Home </a>
@@ -35,7 +41,7 @@
     <div id="banner" class="container center">
       <h1> Collision</h1>
     </div>
-     <div class="container subbanner">
+    <div class="container subbanner">
       <div>
         <div class="heading"> Scenario</div>
         Determine if the customer qualifies for a discount. Discounts are given for purchase totals greater than $100.
@@ -48,7 +54,7 @@
         <input type="text" id="x2" placeholder="Enter x2">
         <input type="text" id="y2" placeholder="Enter y2"><br>
         <input type="button" onclick="collision()" value="Check collision">
-        <div id="output"></div>        
+        <div id="output"></div>
       </div>
     </div>
 

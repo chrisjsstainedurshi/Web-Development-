@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>WD Lesson 4.1 Practical</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script>
-      function discount(){
+      function discount() {
         let price1 = parseFloat(document.getElementById("price1").value);
         let price2 = parseFloat(document.getElementById("price2").value);
         let price3 = parseFloat(document.getElementById("price3").value);
         let output = document.getElementById("output");
-        let message = ""
-        // Challenge 1: Create a variable total that is the sum of all three prices.
+        
+        // Challenge 1: Calculate the total price
+        let total = price1 + price2 + price3;
 
-        // Challenge 2: If the total is more than 100, set message to "Discount earned" otherwise set message to "Not enough for discount"
+        // Challenge 2: Determine if the total qualifies for a discount
+        let message = total > 100 ? "Discount earned" : "Not enough for discount";
 
-        // Challenge 3: Display a message including the total and discount message
+        // Challenge 3: Display the result
+        output.innerHTML = `Total: $${total.toFixed(2)}<br>${message}`;
       }
     </script>
   </head>
