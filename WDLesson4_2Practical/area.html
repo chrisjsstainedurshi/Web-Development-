@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Area</title>
+    <title>Area Calculator</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body id="body">
     <script src="script.js"></script>
     <nav class="container">
-      <a href="index.html"> Home </a>
-      <a href="area.html"> Area </a>
-      <a href="pets.html"> Pets </a>
+      <a href="index.html">Home</a>
+      <a href="area.html">Area</a>
+      <a href="pets.html">Pets</a>
     </nav>
     <div id="banner" class="container center">
-      <h1> Area</h1>
+      <h1> Area Calculator</h1>
     </div>
     <div class="container subbanner">
       <div>
-        <div class="heading"> Scenario</div>
-        Create a program that calculates the area of a rectangle however if either length or width is less than or equal to 0 display "Inappropriate measurement" otherwise display the area.
+        <div class="heading">Scenario</div>
+        Create a program that calculates the area of a rectangle; however, if either the length or width is less than or equal to 0, display "Inappropriate measurement." Otherwise, display the area.
       </div>
     </div>
+    
     <div class="container">
       <div class="card">
-        <!-- Challenge 1: Create the UI for the Scenario -->  
-        <!-- Go to script.js for Challenge 2 -->     
+        <!-- Input Fields for Length and Width -->
+        <div>
+          <label for="length">Length: </label>
+          <input type="number" id="length" placeholder="Enter length">
+        </div>
+        <div>
+          <label for="width">Width: </label>
+          <input type="number" id="width" placeholder="Enter width">
+        </div>
+        <button onclick="calculateArea()">Calculate Area</button>
+
+        <!-- Display Result Here -->
+        <div id="result"></div>
       </div>
     </div>
 
-   <div id="footer" class="container center">
+    <div id="footer" class="container center">
       <h3>Lesson 4.2 Practical</h3>
     </div> 
   </body>
 </html>
+        <!-- Challenge 1: Create the UI for the Scenario -->  
+        <!-- Go to script.js for Challenge 2 -->     

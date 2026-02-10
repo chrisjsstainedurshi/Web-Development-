@@ -1,47 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Pets</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-   </head>
-  <body id="body">
-    <script src="script.js"></script>
-    <nav class="container">
-      <a href="index.html"> Home </a>
-      <a href="area.html"> Area </a>
-      <a href="pets.html"> Pets </a>
-    </nav>
-    <div id="banner" class="container center">
-      <h1> Pets</h1>
-    </div>
-     <div class="container subbanner">
-      <div>
-        <div class="highlight">Scenario:</div>Create a program that allows the user to select one of six different pictures to see.  User can specify the type of animal and type of setting.</p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="card">
-        <h3> Select an animal and setting </h3>
-        <select id="animal">
-          <option disabled>Select animal</option>
-          <option>Bear</option>
-          <option>Cat</option>
-          <option>Dog</option>
-        </select>
-        <select id="emotion">
-          <option disabled>Select animal</option>
-          <option>Funny</option>
-          <option>Sad</option>
-        </select>
-        <input type="button" onclick="pet()" value="Pet">
-        <div id="output"></div>        
-      </div>
-    </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="body">
+  <script src="script.js"></script>
+  <nav class="container">
+    <a href="index.html">Home</a>
+    <a href="area.html">Area</a>
+    <a href="pets.html">Pets</a>
+  </nav>
 
-   <div id="footer" class="container center">
-      <h3>Lesson 4.2 Practical</h3>
+  <div id="banner" class="container center">
+    <h1>Pets</h1>
+  </div>
+
+  <div class="container subbanner">
+    <div>
+      <div class="highlight">Scenario:</div>
+      <p>Create a program that allows the user to select one of six different pictures to see. User can specify the type of animal and type of setting.</p>
     </div>
-  </body>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h3>Select an animal and setting</h3>
+      
+      <label for="animal">Select Animal:</label>
+      <select id="animal">
+        <option disabled selected>Select animal</option>
+        <option value="bear">Bear</option>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+      </select>
+
+      <label for="emotion">Select Emotion:</label>
+      <select id="emotion">
+        <option disabled selected>Select emotion</option>
+        <option value="funny">Funny</option>
+        <option value="sad">Sad</option>
+      </select>
+
+      <input type="button" onclick="pet()" value="Pet">
+      
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <div id="footer" class="container center">
+    <h3>Lesson 4.2 Practical</h3>
+  </div>
+
+</body>
 </html>
