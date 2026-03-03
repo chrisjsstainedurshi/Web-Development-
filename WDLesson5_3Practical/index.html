@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="container" id="banner">
+      <h1>Compound Interest Calculator</h1>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="compound-interest-formula-diagram.png" width="100%"><br>
+        <h4 style="color:red">Note: For this activity we assume an annual compound length therefore n is 1.</h4>
+        <input type="text" id="p" placeholder="Enter Principal (P)"><br>
+        <input type="text" id="r" placeholder="Enter Interest Rate (R)"><br>
+        <input type="text" id="t" placeholder="Enter Length of Investment Time (T in years)"><br>
+        <input type="button" value="Calculate" onclick="balance()"><br>
+      </div>
+      <div class="card">
+        <div id="output" class="container center"></div>
+      </div>  
+    </div>
+    <div id="footer" class="container center">
+      <h3>Lesson 5.3 Practical</h3>
+    </div> 
+    
+  </body>
+</html>

@@ -1,0 +1,54 @@
+html, body{ 
+  height:100%;
+  width:100%;
+  margin:0 auto;
+  font-family:Arial;
+}
+.container{
+  display:flex;
+  padding:20px;
+}
+.center{
+  justify-content:center;
+  align-items:center;
+}
+.card{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+}
+
+#banner{
+  background-color:blue;
+  color:white;
+  justify-content: center;
+}
+#footer{
+  background-color:cornflowerblue;
+  color:white;
+  /*position:fixed;*/
+  left: 0;
+  right: 0;
+  bottom:0px;
+}
+input[type="text"]{
+  width:95%
+}
+table{
+  border:1px solid black;
+  border-collapse: collapse;
+  box-shadow:1px 1px 2px black;
+}
+td,th{
+  padding:5px;
+  text-align:center;
+}
+th{
+  background-color:black;
+  color:yellow;
+}
+tr:nth-child(even){
+  background-color:rgb(220,220,220);
+}

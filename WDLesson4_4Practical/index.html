@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lesson 4.4 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #massTable{
+        margin:0 auto;
+        border-collapse:collapse;
+      }
+      th,td{
+        border: 1px solid black;
+        padding:5px;
+      }
+      th{
+        background-color:black;
+        color:white;
+      }
+      .subtopic{
+        font-style:italic;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+        <h1>Random Numbers</h1>
+        <h3 class="subtopic">Addition Tutor</h3>
+      </div>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to generate random as part of problem for the user to solve.  Based on the accuracy of the response an appropriate image will display.
+        </p>
+       </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <p style="width:1000px;margin:0 auto;"><span class="highlight" >Scenario:</span>Generate two random numbers for an addition problem for the user to answer. Let the user know if they got the correct answer otherwise display the correct solution.  Display an appropriate image based on whether they got the problem correct.</p>
+        <div class="card">
+          <span id="problem"> ? + ? = </span>
+          <input type="response" placeholder="?" id="response">
+          <input type="button" onclick="checkResposne()" value="Check">
+          <input type="button" onclick="generateProblem()" value="Generate">
+          <hr>
+          
+      </div>
+     
+    </div>
+    <div id="footer" class="container center">
+      <h3>Lesson 4.4 Practical</h3>
+    </div> 
+  </body>
+</html>
+
+
