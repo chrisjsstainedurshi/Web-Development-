@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<!-- WD Lesson 1.5: How can we group elements on a page? -->
-<!-- Resources 
-      https://www.w3schools.com/html/html_blocks.asp
--->
 <html>
   <head>
     <title>Exploring Containers</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
-    <!-- Challenge 1: Add the necessary containers to create each of the section shown in WDLesson1_5PracticalDiagram.png -->
-          
-    <!-- Challenge 2: Within each container created, add the HTML elements specified in WDLesson1_5PracticalDiagram.png
-         Note: Images for the last container are stored in the images folder.  Make the images the same height -->
-        
 
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+    <!-- Main Page Container -->
+    <div class="page-container">
 
-<main>
-  <section>
-    <h2>Welcome</h2>
-    <p>My name is Christian McCrain, I have been martial arts since I was 5 and continue to do it today. I maintain idependent and perfer not to talk to anyone but 3 very close friends</p>
-  </section>
-</main>
+      <!-- Navigation Section -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
 
-<footer>
-  <img src="https://homebrewingdeal.files.wordpress.com/2015/08/mr-t-thumbs-up1.jpg" alt="Image 1" style="height: 100px;">
-  <img src="https://i.pinimg.com/736x/c4/82/a0/c482a0de8413bf5f6a5e82990a3e0a71.jpg" alt="Image 2" style="height: 100px;">
-</footer>
+      <!-- Main Content Section -->
+      <main>
+        <section class="welcome-section">
+          <h2>Welcome</h2>
+          <p>
+            My name is Christian McCrain. I have been doing martial arts since I was 5 and continue to practice today. I tend to stay independent and prefer keeping a small circle of three close friends.
+          </p>
+        </section>
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="image-footer">
+        <div class="image-container">
+          <img src="face.jpg" alt="A face">
+          <img src="sign.jpg" alt="A sign">
+          <img src="sun.jpg" alt="The sun"
+        </div>
+      </footer>
+
+    </div>
+
   </body>
 </html>

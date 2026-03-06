@@ -9,4 +9,3 @@ const images = document.querySelectorAll('.gallery img');
 
 function handleMouseOver(image) {
     image.style.border = "3px solid blue"
-
