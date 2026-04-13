@@ -1,40 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>WD Lesson 6.3 Practical</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
-   </head>
-  <body>
-    <div id="banner" class="container center">
-      <h1> Store Title </h1>
-      <!-- Challenge 1: Give your store a new name -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elite Cuts Market</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Banner -->
+  <div id="banner" class="container center">
+    <h1>Elite Cuts Market</h1>
+  </div>
+
+  <!-- Welcome Message -->
+  <div class="container subbanner">
+    <p>
+      Welcome to Elite Cuts Market — where quality meets flavor! 
+      We offer the freshest meats, premium seafood, and mouthwatering desserts. 
+      Taste the difference and treat yourself to the best!
+    </p>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="container">
+    <a onclick="meats()">Meats</a>
+    <a onclick="seafood()">Seafood</a>
+    <a onclick="dessert()">Desserts</a>
+  </nav>
+
+  <!-- Filters -->
+  <div class="filters">
+    <button onclick="sortByPrice()">Sort by Price</button>
+    <button onclick="filterByCategory('meats')">Meats</button>
+    <button onclick="filterByCategory('seafood')">Seafood</button>
+  </div>
+
+  <!-- Cart Indicator -->
+  <div id="cart" onclick="toggleCartDropdown()">
+    Cart: <span id="cart-count">0</span> items
+    <div id="cart-dropdown" class="cart-dropdown"></div>
+  </div>
+
+  <!-- Product Display Title -->
+  <div class="container food_titles center">
+    <h1 id="title">Item Title</h1>
+  </div>
+
+  <!-- Product Cards -->
+  <div class="container" id="items"></div>
+
+  <!-- Product Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="" />
+      <p id="modal-title"></p>
+      <p id="modal-price"></p>
+      <p id="modal-description"></p>
     </div>
-    <div class="container subbanner">
-      <div>
-        <p>
-        <!-- Challenge 2: Welcome the customer to your store.  Tell them why your store is the BEST!  Think of it as a commercial -->
-        </p>
-       </div>
-    </div>
-    <!-- Challenge 3: Create links to display eventHandlers that display Meats, Seafood and Dessert.  
-                      Look at script.js for the names of the event handlers. 
-                      Meats is provided below as an example.
-    -->
-    <nav class="container">
-      <a onclick="meats()"> Meats </a>
-  
-    </nav>
-    <div class="container food_titles center">
-      <h1 id="title">Item Title</h1>
-    </div>
-    <div class="container" id="items">
-      
-    </div>
-    <div id="footer" class="container center">
-      <h3>Lesson 6.3 Practical</h3>
-    </div>  
-  </body>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="container center">
+    <h3>Lesson 6.3 Practical</h3>
+  </div>
+
+</body>
 </html>
