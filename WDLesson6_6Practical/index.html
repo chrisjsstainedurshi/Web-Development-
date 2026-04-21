@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 6.6 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>NYC Open Data</h1>
+          <h2>Filtering 311 Complaints</h2>
+      </div>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to provide various ways to filter  
+          311 Service Requests (Complaints) retrieved from NYC Open Data.</p>
+        <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
+        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data"
+"> 311 Service Request</a>
+        <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
+       </div>
+    </div>
+    <div class="container">
+      <div id="leftPanel">
+        <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
+        <div class="card">
+          <h3>Serach By Borough</h3>
+          <input type="text" id="borough" placeholder="Enter Borough">
+          <hr></hr>
+          <a class="button" onclick="filterByBorough()"> Search </a>
+        </div>
+        <!--Challenge 1: Create another UI in order to filter by zip code -->
+            <!-- Filter UI by Zip Code -->
+<div id="filter-section">
+  <label for="zipCodeInput">Filter by Zip Code:</label>
+  <input type="text" id="zipCodeInput" placeholder="Enter ZIP code" />
+  <button onclick="applyZipFilter()">Filter</button>
+</div>
+
+<script>
+  function applyZipFilter() {
+    const zipCode = document.getElementById('zipCodeInput').value;
+    // Add your filtering logic here
+    alert('Filtering data for ZIP code: ' + zipCode);
+    // Example: call your data filtering function with the zipCode
+  }
+</script>
+        <!--Challenge 3: Create another UI in order to filter by complaint type -->
+          <!-- Filter UI for Complaint Type -->
+<div id="complaint-filter-section">
+  <label for="complaintTypeSelect">Filter by Complaint Type:</label>
+  <select id="complaintTypeSelect">
+    <option value="">--Select Complaint Type--</option>
+    <option value="Pothole">Pothole</option>
+    <option value="Streetlight outage">Streetlight outage</option>
+    <option value="Graffiti removal">Graffiti removal</option>
+    <option value="Broken sidewalk">Broken sidewalk</option>
+    <option value="Waste collection issue">Waste collection issue</option>
+    <!-- Add other complaint types as needed -->
+  </select>
+  <button id="filterComplaintBtn">Filter</button>
+</div>
+
+<!-- Container to display filtered requests -->
+<div id="complaintResults"></div>
+
+<script>
+  // Sample dataset of 311 service requests
+  const serviceRequests = [
+    { id: 1, description: "Pothole on Main St", zip: "12345", complaintType: "Pothole" },
+    { id: 2, description: "Streetlight outage", zip: "54321", complaintType: "Streetlight outage" },
+    { id: 3, description: "Graffiti removal", zip: "12345", complaintType: "Graffiti removal" },
+    { id: 4, description: "Broken sidewalk", zip: "67890", complaintType: "Broken sidewalk" },
+    { id: 5, description: "Waste collection issue", zip: "54321", complaintType: "Waste collection issue" },
+    // more data...
+  ];
+
+  // Event handler for filtering by complaint type
+  document.getElementById('filterComplaintBtn').addEventListener('click', function() {
+    const selectedType = document.getElementById('complaintTypeSelect').value;
+
+    if (selectedType === "") {
+      alert("Please select a complaint type");
+      return;
+    }
+
+    // Filter data by complaint type
+    const filteredRequests = serviceRequests.filter(request => request.complaintType === selectedType);
+
+    // Display the filtered requests
+    displayComplaintRequests(filteredRequests);
+  });
+
+  function displayComplaintRequests(requests) {
+    const resultsDiv = document.getElementById('complaintResults');
+    resultsDiv.innerHTML = ""; // Clear previous results
+
+    if (requests.length === 0) {
+      resultsDiv.innerHTML = "<p>No requests found for this complaint type.</p>";
+      return;
+    }
+
+    const ul = document.createElement('ul');
+    requests.forEach(request => {
+      const li = document.createElement('li');
+      li.textContent = `ID: ${request.id} - ${request.description}`;
+      ul.appendChild(li);
+    });
+    resultsDiv.appendChild(ul);
+  }
+</script>
+
+      </div>
+      <div class="card" id="rightPanel">
+        <h1>311 Service Requests</h1>
+        <div id="result"></div>
+        <div id="output" class="container"></div>
+      </div>
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Lesson 6.6 Practical</h3>
+    </div>  
+  </body>
+</html>
