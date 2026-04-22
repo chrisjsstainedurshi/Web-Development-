@@ -1,120 +1,103 @@
-let data;
-async function init(){
-  
-  //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000"
-  let link = "311.json"
-  info = await fetch(link);
+let data; // Declare data globally
+
+// Initialize function to fetch and display data
+async function init() {
+  const link = "311.json"; // Make sure this file is accessible
+  const info = await fetch(link);
   data = await info.json();
-  
-  let output = document.getElementById("output");
+
+  const output = document.getElementById("output");
   let build = "";
 
-  for(let i = 0; i < data.length; i+=1){
-    let complaint = data[i];
+  for (let i = 0; i < data.length; i++) {
+    const complaint = data[i];
     build += `<div class="fitted card">
-                 <h3>${complaint.complaint_type}</h3>
-                 <hr>
-                 <p>${complaint.borough}</p>
-                 <p>${complaint.incident_zip}</p>
-                 <p>${complaint.descriptor}</p>
-                 <hr>
-                 <p>${complaint.created_date}</p>
-                 <hr>
-                 <p>${complaint.agency}</p>
-              </div>`    
+                <h3>${complaint.complaint_type}</h3>
+                <hr>
+                <p>Borough: ${complaint.borough}</p>
+                <p>Zip: ${complaint.incident_zip}</p>
+                <p>Descriptor: ${complaint.descriptor}</p>
+                <hr>
+                <p>Date: ${complaint.created_date}</p>
+                <hr>
+                <p>Agency: ${complaint.agency}</p>
+              </div>`;
   }
   output.innerHTML = build;
 }
 
-// Code below demonstrates the basic process to filter information.  Use as a guide for Challenge 2 and 4.
-function filterByBorough(){
-  let output = document.getElementById("output");
-  let borough = document.getElementById("borough").value;
-  let result = document.getElementById("result");
+// Call init on window load
+window.onload = async () => {
+  await init();
+
+  // Attach event listener for complaint type filter button
+  document.getElementById('filterComplaintBtn').addEventListener('click', filterByComplaintType);
+};
+
+// Function to filter by borough
+function filterByBorough() {
+  const output = document.getElementById("output");
+  const result = document.getElementById("result");
+  const borough = document.getElementById("borough").value.trim().toLowerCase();
+
   let build = "";
   let ct = 0;
 
-  for(let i = 0; i < data.length; i+=1){
-    let complaint = data[i];
-    if(complaint.borough == borough){
+  for (let i = 0; i < data.length; i++) {
+    const complaint = data[i];
+    if (complaint.borough && complaint.borough.toLowerCase() === borough) {
       build += `<div class="fitted card">
-                    <h3>${complaint.complaint_type}</h3>
-                    <hr>
-                    <p>${complaint.borough}</p>
-                    <p>${complaint.incident_zip}</p>
-                    <p>${complaint.descriptor}</p>
-                    <hr>
-                    <p>${complaint.created_date}</p>
-                    <hr>
-                    <p>${complaint.agency}</p>
+                  <h3>${complaint.complaint_type}</h3>
+                  <hr>
+                  <p>Borough: ${complaint.borough}</p>
+                  <p>Zip: ${complaint.incident_zip}</p>
+                  <p>Descriptor: ${complaint.descriptor}</p>
+                  <hr>
+                  <p>Date: ${complaint.created_date}</p>
+                  <hr>
+                  <p>Agency: ${complaint.agency}</p>
                 </div>`;
-      ct += 1;
+      ct++;
     }
   }
-  result.innerHTML = `${ct} Results found.`
+  result.innerHTML = `${ct} Results found.`;
   output.innerHTML = build;
 }
 
-<!-- Filter UI for Complaint Type -->
-<div id="complaint-filter-section">
-  <label for="complaintTypeSelect">Filter by Complaint Type:</label>
-  <select id="complaintTypeSelect">
-    <option value="">--Select Complaint Type--</option>
-    <option value="Pothole">Pothole</option>
-    <option value="Streetlight outage">Streetlight outage</option>
-    <option value="Graffiti removal">Graffiti removal</option>
-    <option value="Broken sidewalk">Broken sidewalk</option>
-    <option value="Waste collection issue">Waste collection issue</option>
-    <!-- Add more options as needed -->
-  </select>
-  <button id="filterComplaintBtn">Filter</button>
-</div>
+// Function to filter by complaint type
+function filterByComplaintType() {
+  const selectedType = document.getElementById('complaintTypeSelect').value.trim();
+  const resultsDiv = document.getElementById('complaintResults');
 
-<div id="complaintResults"></div>
+  // Clear previous results
+  resultsDiv.innerHTML = "";
 
-<script>
-  // Sample dataset
-  const serviceRequests = [
-    { id: 1, description: "Pothole on Main St", zip: "12345", complaintType: "Pothole" },
-    { id: 2, description: "Streetlight outage", zip: "54321", complaintType: "Streetlight outage" },
-    { id: 3, description: "Graffiti removal", zip: "12345", complaintType: "Graffiti removal" },
-    { id: 4, description: "Broken sidewalk", zip: "67890", complaintType: "Broken sidewalk" },
-    { id: 5, description: "Waste collection issue", zip: "54321", complaintType: "Waste collection issue" },
-  ];
-
-  // Add event listener for the filter button
-  document.getElementById('filterComplaintBtn').addEventListener('click', function() {
-    const selectedType = document.getElementById('complaintTypeSelect').value.trim();
-
-    // Check if a complaint type was selected
-    if (selectedType === "") {
-      alert("Please select a complaint type");
-      return;
-    }
-
-    // Filter requests based on complaint type
-    const filteredRequests = serviceRequests.filter(request => request.complaintType === selectedType);
-
-    // Display the filtered requests
-    displayComplaintRequests(filteredRequests);
-  });
-
-  // Function to display filtered requests
-  function displayComplaintRequests(requests) {
-    const resultsDiv = document.getElementById('complaintResults');
-    resultsDiv.innerHTML = ""; // Clear previous results
-
-    if (requests.length === 0) {
-      resultsDiv.innerHTML = "<p>No requests found for this complaint type.</p>";
-      return;
-    }
-
-    const ul = document.createElement('ul');
-    requests.forEach(request => {
-      const li = document.createElement('li');
-      li.textContent = `ID: ${request.id} - ${request.description}`;
-      ul.appendChild(li);
-    });
-    resultsDiv.appendChild(ul);
+  if (selectedType === "") {
+    alert("Please select a complaint type");
+    return;
   }
-</script>
+
+  let build = "";
+  let count = 0;
+
+  for (let i = 0; i < data.length; i++) {
+    const complaint = data[i];
+    if (complaint.complaint_type && complaint.complaint_type === selectedType) {
+      build += `<div class="fitted card">
+                  <h3>${complaint.complaint_type}</h3>
+                  <hr>
+                  <p>Borough: ${complaint.borough}</p>
+                  <p>Zip: ${complaint.incident_zip}</p>
+                  <p>Descriptor: ${complaint.descriptor}</p>
+                  <hr>
+                  <p>Date: ${complaint.created_date}</p>
+                  <hr>
+                  <p>Agency: ${complaint.agency}</p>
+                </div>`;
+      count++;
+    }
+  }
+  resultsDiv.innerHTML = `${count} Results found.`;
+  // Optionally, also update main output
+  document.getElementById('output').innerHTML = build;
+}
