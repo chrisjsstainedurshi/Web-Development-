@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* layout */
+.container {
+  display: flex;
+  padding: 10px;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* banner */
+#banner {
+  background-color: blue;
+  color: white;
+}
+
+.subbanner {
+  background-color: cornflowerblue;
+}
+
+/* cards */
+#output {
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+  text-align: center;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+/* image */
+.fit {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* button */
+.button {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  padding: 6px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.button:hover {
+  background-color: cornflowerblue;
+}
+
+/* footer */
+#footer {
+  background-color: cornflowerblue;
+  color: white;
+}
