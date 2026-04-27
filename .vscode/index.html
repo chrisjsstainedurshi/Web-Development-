@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Vehicle Collisions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Motor Vehicle Collisions</h1>
+
+    <div class="filters">
+        <h2>Single Filter</h2>
+        <label for="borough">Borough:</label>
+        <select id="borough">
+            <option value="">All</option>
+            <option value="MANHATTAN">Manhattan</option>
+            <option value="BROOKLYN">Brooklyn</option>
+            <option value="QUEENS">Queens</option>
+            <option value="BRONX">Bronx</option>
+            <option value="STATEN ISLAND">Staten Island</option>
+        </select>
+
+        <h2>Multiple Filters</h2>
+        <label for="injuries">Number of Persons Injured (>=):</label>
+        <input type="number" id="injuries" placeholder="0">
+        
+        <label for="date">Date (YYYY-MM-DD):</label>
+        <input type="date" id="date">
+
+        <button id="applyFilters">Apply Filters</button>
+    </div>
+
+    <div id="collision-container">
+        <!-- Collision cards will appear here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
