@@ -1,42 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>FBI Most Wanted</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Vehicle Collision Dataset</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div id="banner" class="container center">
-    <h1>FBI: Most Wanted</h1>
-  </div>
+    <header>
+        <h1>Motor Vehicle Collision Dataset</h1>
+    </header>
 
-  <div class="container subbanner">
-    <div>
-      <p>
-        This practical retrieves FBI wanted data and displays it as cards.
-      </p>
+    <div id="filters">
+        <label for="collision-type">Collision Type:</label>
+        <select id="collision-type">
+            <option value="all">All</option>
+            <option value="rear-end">Rear End</option>
+            <option value="side-impact">Side Impact</option>
+        </select>
 
-      <a class="button" target="_blank"
-        href="https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json">
-        Raw Data
-      </a>
+        <label for="date-range">Date Range:</label>
+        <input type="date" id="start-date">
+        <input type="date" id="end-date">
 
-      <a class="button" target="_blank"
-        href="https://jsoneditoronline.org/">
-        JSON Editor Online
-      </a>
+        <button id="filter-btn">Filter</button>
     </div>
-  </div>
 
-  <div id="output" class="container"></div>
+    <div id="cards-container">
+        <!-- Cards will be dynamically inserted here -->
+    </div>
 
-  <div id="footer" class="container center">
-    <h3>Lesson 6.4 Practical</h3>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
