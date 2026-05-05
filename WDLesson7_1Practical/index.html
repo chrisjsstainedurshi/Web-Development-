@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Functions Mini App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+
+  <!-- Banner -->
+  <div id="banner" class="container center">
+    <h1>Functions Mini App</h1>
+  </div>
+
+  <!-- BMI Section -->
+  <div class="card">
+    <h2>BMI Calculator</h2>
+    <input id="height" type="number" placeholder="Height (meters)">
+    <input id="weight" type="number" placeholder="Weight (kg)">
+    <button onclick="calculateBMI()">Calculate BMI</button>
+  </div>
+
+  <!-- Lottery Section -->
+  <div class="card">
+    <h2>Lottery Generator</h2>
+    <input id="lotteryCount" type="number" placeholder="Numbers (1–10)">
+    <button onclick="generateLottery()">Generate Lottery</button>
+  </div>
+
+  <!-- Controls -->
+  <div class="card">
+    <button onclick="clearOutput()">Clear Output</button>
+    <button onclick="showHistory()">Show History</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Output -->
+  <div class="card">
+    <h2>Output</h2>
+    <div id="output" class="container column"></div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="container center">
+    <h3>Lesson 7.1 Practical</h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
