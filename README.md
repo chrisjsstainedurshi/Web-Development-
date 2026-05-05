@@ -1,18 +1,8 @@
 # Web-Development-
 
-This is my first webpage!
-<body>
-    <h2> Favorite foods </h2>
-    <ol>
-        <li> steak </li>
-        <li> chicken </li>
-        <li> Eggs </li>
-    </ol>
-
-<body>
-    <h2> Hobbies </h2>
-    <ul>
-        <li> sports </li>
-        <li> sleeping </li>
-        <li> eating </li>
-    </ul>
+<p>Throughout their academic and extracurricular journey, this student has demonstrated a strong commitment to personal growth, discipline, and leadership across multiple areas of life.
+In school, they have consistently maintained strong academic performance, earning good grades through steady effort and dedication. Rather than treating school as a routine obligation, they approach it with focus and responsibility, showing an ability to balance academic expectations with demanding outside commitments.
+Outside the classroom, they have taken on meaningful leadership through teaching martial arts to younger students. This role goes beyond simply practicing skills—it requires patience, communication, and the ability to guide others through learning and improvement. By teaching kids martial arts, they have developed leadership qualities that include responsibility, mentorship, and the ability to inspire discipline in others.
+Their achievements in martial arts reflect years of dedication and perseverance. They have earned a 3rd-degree black belt in Taekwondo, a blue belt in Brazilian Jiu-Jitsu, and reached the highest rank in Muay Thai with a red Prajiad. These accomplishments represent not only technical skill but also long-term commitment, resilience through training, and the mental toughness required to progress through increasingly difficult levels in multiple disciplines.
+In addition to athletics and teaching, they contribute to their school community through work at Bayside High School, where they help by putting up posters and supporting efforts to improve school spirit and engagement. This involvement shows initiative and a willingness to take part in making their environment more positive and active for students.
+Overall, this student’s achievements reflect a well-rounded character built on discipline, leadership, and consistent effort. Whether in academics, martial arts, teaching, or school involvement, they demonstrate a strong drive to improve themselves and contribute positively to the people and communities around them.</p>
