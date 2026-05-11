@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>NYC Open Data Refactoring</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+   </head>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>Refactoring with Functions</h1>
+          <p>NYC 311 & Parking Violations</p>
+      </div>
+    </div>
+    
+    <div class="container subbanner">
+      <div>
+        <p>This classwork challenges students to create functions to abstract underlying processes and reuse code instead of copying and pasting. This process is called refactoring. Example uses the 311 Complaint Services and Open Parking and Camera Violations from <a href="https://opendata.cityofnewyork.us/">NYC Open Data</a> and generates HTML cards.</p>
+       </div>
+    </div>
+    
+    <div class="container">
+      <div class="card" id="rightPanel">
+        <h1>Output</h1>
+        <div id="output"></div>
+      </div>
+    </div>
+    
+    <div id="footer" class="container center">
+      <h3>Lesson 45 Class Example</h3>
+    </div>  
+  </body>
+</html>

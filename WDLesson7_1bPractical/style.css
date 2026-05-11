@@ -1,0 +1,121 @@
+html,body{
+  margin:0 auto;
+  font-family:Arial;
+}
+.container{
+  display:flex;
+  padding:10px;
+}
+.center{
+  justify-content:center;
+  align-items:center;
+}
+
+nav{
+  background-color:cornflowerblue;
+}
+nav a{
+  color:black;
+  padding:10px;
+  flex:1;
+  text-decoration:none;
+  text-align:center;
+}
+nav a:hover{
+  color:white;
+}
+.subbanner{
+  background-color:cornflowerblue;
+}
+#banner{
+  background-color:blue;
+  color:white;
+}
+#footer{
+  background-color:cornflowerblue;
+  color:white;
+  left: 0;
+  right: 0;
+  bottom:0px;
+}
+ 
+.card{
+  flex:1 1 300px;
+  margin:10px;
+  padding:15px;
+  border:1px solid gray;
+  text-align:left;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+  border-radius:8px;
+  background: white;
+  transition: transform 0.2s;
+}
+.card:hover{
+  transform: translateY(-3px);
+}
+
+.complaint-card{
+  border-left: 5px solid #3498db;
+}
+.violation-card{
+  border-left: 5px solid #e74c3c;
+}
+.status-open{
+  background: #fff8e1;
+}
+.status-closed{
+  background: #e8f5e9;
+}
+.high-fine{
+  border-left-color: #c0392b;
+  border-left-width: 8px;
+}
+
+.highlight{
+  font-style:italic;
+  color:#2c3e50;
+  font-weight: 600;
+}
+.heading{
+  font-weight:bold;
+  margin-top: 0;
+  color: #1a1a1a;
+}
+.button{
+  text-decoration:none;
+  background-color:blue;
+  color:white;
+  border-radius:4px;
+  padding:6px;
+  box-shadow:2px 2px 2px black;
+}
+.button:hover{
+  background-color:cornflowerblue;
+}
+#leftPanel{
+  flex:1;
+}
+#rightPanel{
+  flex:2;
+}
+.fitted{
+  max-width:200px;
+  min-width:200px;
+}
+.card img{
+  height:100px;
+}
+#output{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.card p{
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+.subbanner a{
+  color: white;
+  text-decoration: underline;
+}
