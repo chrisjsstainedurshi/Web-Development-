@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Leaflet Map Project</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
+
+  <link href="style.css" rel="stylesheet">
+
+  <script src="helper.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Banner -->
+  <div id="banner" class="container center">
+
+    <h1>Leaflet Map Explorer</h1>
+
+  </div>
+
+  <!-- Description -->
+  <div class="container subbanner">
+
+    <p>
+      Enter latitude and longitude to display a map.
+      You can also click on the map to view coordinates.
+    </p>
+
+  </div>
+
+  <!-- Input Section -->
+  <div class="container">
+
+    <input
+      type="text"
+      id="lat"
+      placeholder="Enter latitude"
+    >
+
+    <input
+      type="text"
+      id="lon"
+      placeholder="Enter longitude"
+    >
+
+    <a class="button" onclick="displayMap()">
+      View Map
+    </a>
+
+  </div>
+
+    <!-- Preset Buttons -->
+<div class="container">
+
+  <a class="button" onclick="loadStatue()">
+    Statue of Liberty
+  </a>
+
+  <a class="button" onclick="loadEiffel()">
+    Eiffel Tower
+  </a>
+
+  <a class="button" onclick="loadGoldenGate()">
+    Golden Gate Bridge
+  </a>
+
+  <a class="button" onclick="loadTimesSquare()">
+    Times Square
+  </a> 
+
+  <a class="button" onclick="loadGrandCanyon()">
+    Grand Canyon
+  </a>
+
+  <a class="button" onclick="loadDisney()">
+    Disney World
+  </a>
+
+  <a class="button" onclick="loadEverest()">
+    Mount Everest
+  </a>
+
+  <a class="button" onclick="loadTokyo()">
+    Tokyo Tower
+  </a>
+
+  <a class="button" onclick="loadSydney()">
+    Sydney Opera House
+  </a>
+
+  <a class="button" onclick="loadTajMahal()">
+    Taj Mahal
+  </a>
+
+  <a class="button" onclick="loadNiagara()">
+    Niagara Falls
+  </a>
+
+  <a class="button" onclick="loadHollywood()">
+    Hollywood Sign
+  </a>
+
+  <a class="button" onclick="loadWhiteHouse()">
+    White House
+  </a>
+
+</div>
+
+  </div>
+
+  <!-- Map Output -->
+  <div id="output" class="container">
+
+    <div id="map"></div>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="container center">
+
+    <h3>Lesson 8.4 Leaflet Demonstration</h3>
+
+  </div>
+
+</body>
+
+</html>
