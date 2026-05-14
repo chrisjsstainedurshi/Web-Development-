@@ -56,13 +56,13 @@ function showMap(lat, lon){
 
     // Tile layer
     L.tileLayer(
-      "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-      {
-        maxZoom:18,
-        attribution:"&copy; OpenStreetMap contributors"
-      }
-    ).addTo(mapObj);
-
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  {
+    maxZoom: 18,
+    attribution:
+      "&copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics"
+  }
+).addTo(mapObj);
     // Click map for coordinates
     mapObj.on("click", function(e){
 

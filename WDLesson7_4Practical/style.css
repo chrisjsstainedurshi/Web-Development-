@@ -1,0 +1,125 @@
+/* =========================
+   GENERAL PAGE STYLES
+========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* =========================
+   MAP
+========================= */
+
+#map {
+  height: 500px;
+  width: 100%;
+  border-bottom: 4px solid #1f2937;
+}
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+#cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 20px;
+
+  padding: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background-color: white;
+
+  border-radius: 12px;
+
+  padding: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.15);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 4px 14px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+
+  color: #c0392b;
+
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin: 8px 0;
+
+  line-height: 1.4;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #c0392b;
+}
+
+.popup-content p {
+  margin: 6px 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  #map {
+    height: 400px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
